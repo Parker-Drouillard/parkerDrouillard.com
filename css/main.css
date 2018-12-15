@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+img.bottom{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+img.top{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: -101%;
+    left: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+img.top:hover{
+    opacity: 0;
+}
+
+
+.pageWrapper{
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+    /* IMAGE PROFILE */
+
+.centerCircle{
+   height: 50vh;
+   width: 50vh;
+   background-color: #A02E22;
+   border-radius: 50%;
+   margin-top: 16vh;
+   margin-left: calc((100vw - 50vh) / 2);
+}
+
+.centerCircle-innerCircle{
+    width: 96%;
+    height: 96%;
+    margin-left: 2%;
+    margin-top: 0%;
+    margin-right: 2%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nameHeader{
+    height: 8vh;
+    margin: auto;
+    margin-top: 7vh;
+    display: block;
+}
+
+#typeName{
+    padding: 2vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    border-radius: 2vh;
+    border: 0.1vh solid #A02E22;
+    background-color: #fff;
+    height: 8vh;
+    margin: auto;
+    display: block;
+    opacity: 1; 
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#typeName.hide{
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+#actualTypeName{
+    height: 8vh;
+    margin: auto;
+    margin-top: -10vh;
+    display: block;
+    opacity: 0;
+
+}
