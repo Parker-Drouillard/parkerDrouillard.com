@@ -1,12 +1,14 @@
 var baseWidth = 2000;
 var numPages = 4;
 var scrollDiv;
-var debug = false;
+var debug = true;
 
 window.onload = function(){
     document.body.style.width = window.screen.availWidth;
     // document.body.style.height = window.screen.availHeight * 3;
-    setTimeout(function() {makeNameTextLookCool(); initializeHorizontalScroll(); initializeNavBar();}, 9000);
+    setTimeout(function() {makeNameTextLookCool(); }, 9000);
+    initializeHorizontalScroll();
+    initializeNavBar();
     console.log("window loaded");
     scrollDiv  = document.getElementById("scroll-0");
 
@@ -14,9 +16,6 @@ window.onload = function(){
         initializeDebug();
     }
 
-    
-
-    
 }
 
         // INITIALIZATIONS
@@ -49,28 +48,39 @@ function initializeNavBar(){
         navButtons[i].classList.add("show");
         //Navbar function
         navButtons[i].addEventListener("click", function() {
-            activateButton(this);
+            scrollToSection(this);
         });
     }
 }
 
 //Horizontal scrolling
 function initializeHorizontalScroll(){
-    document.body.style.overflowY = 'auto';
-
+    
     var $horizontal = $('.hIndex-0');
     var startPosition = $horizontal.position().left;
     var speed = 100;
     $(window).scroll(function () {
         var st = $(this).scrollTop();
         var newPos = -(st * (speed/100)) + startPosition;
-        
+
         $horizontal.css({
             'left': newPos 
         });
         // if(debug){
         posUpdate();
         // }
+
+        var windowWidth = window.screen.availWidth;
+
+        if (newPos > -windowWidth){
+            activateButton(document.getElementById("navHome"));
+        } else if (newPos <= -windowWidth && newPos > -windowWidth * 2){
+            activateButton(document.getElementById("navAbout"));
+        } else if(newPos <= -windowWidth * 2 && newPos > -windowWidth * 3){
+            activateButton(document.getElementById("navHackathons"));
+        } else if(newPos <= -windowWidth * 3){
+            activateButton(document.getElementById("navProjects"));
+        }
 
     });
 }
@@ -99,17 +109,21 @@ function activateButton(button){
 
         var activeBar = button.getElementsByClassName("active-bar");
         activeBar[0].classList.add("active");
-
-        if(button.id == "navHome"){
-            window.scrollTo(0,0);
-        } else if(button.id == "navAbout"){
-            window.scrollTo(0, window.screen.availWidth);
-        } else if(button.id == "navHackathons"){
-            window.scrollTo(0, window.screen.availWidth * 2);
-        } else if(button.id == "navProjects"){
-            window.scrollTo(0, window.screen.availWidth * 3);
-        }
     }
+}
+
+function scrollToSection(button){
+    if(button.id == "navHome"){
+        window.scrollTo(0,0);
+    } else if(button.id == "navAbout"){
+        window.scrollTo(0, window.screen.availWidth);
+    } else if(button.id == "navHackathons"){
+        window.scrollTo(0, window.screen.availWidth * 2);
+    } else if(button.id == "navProjects"){
+        window.scrollTo(0, window.screen.availWidth * 3);
+    }
+
+    activateButton(button);
 }
 
 
