@@ -2,6 +2,11 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+
 body {
     margin: 0;
     background-color: #f4f4f4;
@@ -63,6 +68,7 @@ img.top:hover{
     width: 100vw;
     display: inline-block;
     align-content: center;
+    position: relative;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -92,7 +98,7 @@ img.top:hover{
     overflow: hidden;
 }
 
-.nameHeader{
+.myNameHeader{
     height: 8vh;
     margin: auto;
     margin-top: 7vh;
@@ -127,9 +133,9 @@ img.top:hover{
 #actualTypeName{
     height: 8vh;
     margin: auto;
-    margin-top: -10vh;
+    /* margin-top: -10vh; */
     display: block;
-    opacity: 0;
+    /* opacity: 0; */
 
 }
 
@@ -143,7 +149,7 @@ img.top:hover{
     transform: translate(0,0);
 }
 
-.navbar{
+.myNavbar{
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -151,15 +157,29 @@ img.top:hover{
 }
 
 .active-bar.active{
+ -webkit-animation: centerGrow 1s; 
+    -moz-animation: centerGrow 1s; 
+      -o-animation: centerGrow 1s;  
+         animation: centerGrow 1s;
+
 
     width: calc(100% + 2vw);
     height: 0.5vh;
     margin-top: none;
     transform:translate(-1vw, 0);
+
+
 }
 
 .active-bar.red{
+
     background-color: #A02E22;
+
+    -webkit-animation: centerShrink 1s; 
+    -moz-animation: centerShrink 1s; 
+      -o-animation: centerShrink 1s;  
+         animation: centerShrink 1s;
+ 
 }
 
 .active-bar.grey{
@@ -212,18 +232,60 @@ img.top:hover{
     padding-bottom: 1.5vh;
 }
 
-.col4{
-    width: 10%;
-    align-content: center;
-    align-items: middle;
-    padding: auto;
-    display: inline-block;
-    text-align: center;
+
+
+
+
+.aboutLinkBox {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    width: 25%;
+    height: auto;
+    border-radius:  10px;
+    background-color: #ffffff;
+    
+    padding: 1%;
+    min-width: 20vh;
+
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    justify-content: space-evenly;
+
+    -webkit-box-shadow: inset 0px 0px 15px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 15px -2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 15px -2px rgba(0,0,0,0.75);
 }
 
+.aboutLinkBox:hover {
+    background-color: #f4f4f4;
+}
 
+.aboutButton{
+    width: 20%;
+    height: auto;
+    max-height: 100%;
+    padding: 1vw;
+}
 
+.aboutButton:hover{
+    background-color: #e2e2e2;
+    border-radius: 5%;
+    cursor: pointer;
 
+    -webkit-box-shadow: inset 0px 0px 15px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 15px -2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 15px -2px rgba(0,0,0,0.75);
+}
+
+.aboutSVG{
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
 
 /* DEBUGGER */
 #debugger-window {
@@ -238,4 +300,50 @@ img.top:hover{
     background-color: black;
     border-bottom-left-radius: 10px;
     padding: 3px;
+}
+
+
+
+@keyframes centerGrow {
+	from {width: 0%; transform:translate(0, 0);}
+	to	 {width: calc(100% + 2vw);  transform:translate(1vw, 0);}
+}
+
+@keyframes centerShrink {
+    from {width: calc(100% + 2vw); margin-left: 0%;}
+	to   {width: 0%; margin-left: 50%}
+
+}
+
+@-moz-keyframes centerGrow {
+	from {width: 0%; transform:translate(0, 0);}
+	to	 {width: calc(100% + 2vw);  transform:translate(1vw, 0);}
+}
+
+@-moz-keyframes centerShrink {
+    from {width: 100%; margin-left: 0%;}
+	to   {width: 0%; margin-left: 50%}
+
+}
+
+@-webkit-keyframes centerGrow {
+	from {width: 0%; transform:translate(0, 0);}
+	to	 {width: calc(100% + 2vw);  transform:translate(1vw, 0);}
+}
+
+@-webkit-keyframes centerShrink {
+    from {width: 100%; margin-left: 0%;}
+	to   {width: 0%; margin-left: 50%}
+
+}
+
+@-ms-keyframes centerGrow {
+	from {width: 0%; transform:translate(0, 0);}
+	to	 {width: calc(100% + 2vw);  transform:translate(1vw, 0);}
+}
+
+@-ms-keyframes centerShrink {
+    from {width: 100%; margin-left: 0%;}
+	to   {width: 0%; margin-left: 50%}
+
 }

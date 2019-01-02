@@ -8,6 +8,14 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css.map"> -->
+        <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap-reboot.min.css.map"> -->
+        <!-- <link rel="stylesheet" href="css/bootstrap.css.map"> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 
@@ -15,6 +23,10 @@
         <script type="text/javascript" src="JS/jquery.js"></script>
 
         <script type="text/javascript" src="JS/main.js"></script>
+
+        <!-- <script type="text/javascript" src="JS/bootstrap.bundle.js"></script> -->
+        <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="JS/bootstrap.min.js.map"></script>
 
     </head>
     <body>
@@ -27,7 +39,7 @@
             <div style="font-size: 8px; padding-left: 10px;">Debug = TRUE</div>
         </div>
         <!-- NAVIGATION -->
-        <div class="navbar">
+        <div class="myNavbar">
             <!-- <div class="col4"> -->
                 <div id ="navHome" class="button-Header active" style="margin-left: 2vw;">
                     <div class="active-bar red active"></div>
@@ -50,6 +62,7 @@
         <div class="horizontal-repeat">
             <div id="scroll-0" class="hIndex-0" style="left: 0;">
                 
+                    <!-- HOME PAGE -->
                 <div class="pageWrapper">
                     <!-- Add your site or application content here -->
                     
@@ -64,19 +77,78 @@
                         <!-- <img src="assets/myface copy-01.svg" style="height: 40vh; width: 40vh;"> -->
                     </div>
                     
-                    <div id="nameHeader" class="nameHeader">
-                        <img id="typeName" src='assets/ParkerDrouillard.gif' alt="Cool Guy - Parker Drouillard"/>
+                    <div class="myNameHeader">
+                        <!-- <img id="typeName" src='assets/ParkerDrouillard.gif' alt="Cool Guy - Parker Drouillard"/> -->
                         <img id="actualTypeName" src='assets/parkerDrouillard_name.png' alt="Parker Drouillard"/>
                     </div>
                 </div>
+
+                <!-- ABOUT PAGE -->
+
+                <div class="pageWrapper">
+                    <div class="aboutLinkBox">
+                        <div class="container">
+                            <div class="row">
+                                <div class="aboutButton col-md-4">
+                                    <a href="https://www.github.com/Parker-Drouillard" target="_blank" data-toggle="tooltip" title="GitHub">
+                                        <img class="aboutSVG" src="assets/github-logo.svg" alt="github-logo">
+                                    </a>
+                                    
+                                </div>
+                                <div class="aboutButton col-md-4">
+                                    <a href="assets/Parker Drouillard.pdf" target="_blank" data-toggle="tooltip" title="Resume">
+                                        <img class="aboutSVG" src="assets/cv.svg" alt="Resume">
+                                    </a>
+                                </div>
+                                <div class="aboutButton col-md-4">
+                                    <a href="https://www.linkedin.com/in/parkerdrouillard/" target="_blank" data-toggle="tooltip" title="LinkedIn">
+                                        <img class="aboutSVG" src="assets/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row" style="text-align: center;">
+                                <div class="col">
+                                    Resources
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div style="height: 80%; width: 100%;">
+                            <a href="assets/Parker Drouillard.pdf" target="_blank" style="height: 20px; width: 20px; background-color: red; position: relative; top: 0; left: 0;">
+                                <div id="githubButton" class="aboutButton">
+                                    <img class="aboutSVG" src="assets/github-logo.svg"alt="github-logo">
+                                    <div>GitHub</div>
+                                </div>
+                            </a>
+                        </div> -->
+                        <!-- <div style="height: 50%; display: flex; align-items: middle;">
+                            <div id="githubButton" class="aboutButton" onclick="location.href='https://www.github.com/Parker-Drouillard'">
+                                <img class="aboutSVG" src="assets/github-logo.svg"alt="github-logo">
+                                <div>GitHub</div>
+                            </div>
+
+                            <div id="resumeButton" class="aboutButton" onclick="location.href='/assets/Parker Drouillard.pdf' target='_blank'">
+                                <img class="aboutSVG" src="assets/cv.svg" alt="RESUME">
+                                <div>Resume</div>
+                            </div>
+
+                            <div id="linkedinButton" class="aboutButton" onclick="location.href='https://www.linkedin.com/in/parkerdrouillard/'">
+                                <img class="aboutSVG" src="assets/linkedin.svg" alt="LinkedIn">
+                                <div>LinkedIn</div>
+                            </div>
+                      </div> -->
+                        <!-- <div style="position: relative; bottom: 0%; margin: auto;">RESOURCES</div> -->
+                    </div>
+                </div>
+
+                 <!-- HACKATHONS PAGE -->
+
                 <div class="pageWrapper">
                     <div style="color: black; display: block; margin:auto; margin-left: 25vw; font-size: 10vh; font-weight: 700; padding-top: 30vh; font-family: Arial, Helvetica, sans-serif;">PAGE</div>
                     <div style="color: black; display: block; margin: auto; margin-left: 25vw; font-size: 10vh; font-weight: 700; padding-top: 1vh; font-family: Arial, Helvetica, sans-serif;">COMING SOON!</div>
                 </div>
-                <div class="pageWrapper">
-                    <div style="color: black; display: block; margin:auto; margin-left: 25vw; font-size: 10vh; font-weight: 700; padding-top: 30vh; font-family: Arial, Helvetica, sans-serif;">PAGE</div>
-                    <div style="color: black; display: block; margin: auto; margin-left: 25vw; font-size: 10vh; font-weight: 700; padding-top: 1vh; font-family: Arial, Helvetica, sans-serif;">COMING SOON!</div>
-                </div>
+
+                <!-- PROJECTS -->
+
                 <div class="pageWrapper">
                     <div style="color: black; display: block; margin:auto; margin-left: 25vw; font-size: 10vh; font-weight: 700; padding-top: 30vh; font-family: Arial, Helvetica, sans-serif;">PAGE</div>
                     <div style="color: black; display: block; margin: auto; margin-left: 25vw; font-size: 10vh; font-weight: 700; padding-top: 1vh; font-family: Arial, Helvetica, sans-serif;">COMING SOON!</div>

@@ -1,12 +1,12 @@
 var baseWidth = 2000;
 var numPages = 4;
 var scrollDiv;
-var debug = true;
+var debug = false;
 
 window.onload = function(){
     document.body.style.width = window.screen.availWidth;
     // document.body.style.height = window.screen.availHeight * 3;
-    setTimeout(function() {makeNameTextLookCool(); }, 9000);
+    // setTimeout(function() {makeNameTextLookCool(); }, 9000);
     initializeHorizontalScroll();
     initializeNavBar();
     console.log("window loaded");
@@ -72,9 +72,9 @@ function initializeHorizontalScroll(){
 
         var windowWidth = window.screen.availWidth;
 
-        if (newPos > -windowWidth){
+        if (newPos > -windowWidth*2/3 ){
             activateButton(document.getElementById("navHome"));
-        } else if (newPos <= -windowWidth && newPos > -windowWidth * 2){
+        } else if (newPos <= -windowWidth*2/3 && newPos > -windowWidth * 2){
             activateButton(document.getElementById("navAbout"));
         } else if(newPos <= -windowWidth * 2 && newPos > -windowWidth * 3){
             activateButton(document.getElementById("navHackathons"));
